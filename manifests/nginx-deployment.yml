@@ -4,7 +4,7 @@ metadata:
   name: nginx-testing
   namespace: kafka-ui
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: csos-app
