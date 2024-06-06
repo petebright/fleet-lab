@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-testing
+  namespace: kafka-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: csos-app
+  template:
+    metadata:
+      labels:
+        app: csos-app
+    spec:
+      containers:
+      - name: nxing-test
+        image: nginx:latest
+        ports:
+        - containerPort: 80
