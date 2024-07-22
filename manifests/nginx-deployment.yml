@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: root-only-nginx
-  namespace: root-only
+  namespace: devops
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: csos-app
+      app: nginx-app
   template:
     metadata:
       labels:
-        app: csos-app
+        app: nginx-app
     spec:
       serviceAccountName: dev-csos-admins
       containers:
